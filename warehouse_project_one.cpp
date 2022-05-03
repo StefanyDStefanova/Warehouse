@@ -7,23 +7,20 @@
 #define SEARCH_NOT_FOUND	0
 #define SEARCH_SUCCESS		1
 
+struct Data {};
+
 class Location
 {
 	unsigned int section;
 	unsigned int shelf;
 	unsigned int serialNumber;
+	//da si naprawq defolten konstruktor kojto da iunicializira s 0
 
-	Location() = default;
-	Location(unsigned int section, unsigned int shelf, unsigned int serialNumber);
-	Location(const Location& source);
-	~Location();
-
-	Location& operator=(const Location& source);
-
-private:
+/*/private:
 	void Initialize(unsigned int section, unsigned int shelf, unsigned int serialNumber);
 	void Finalize();
-
+	*/
+	// added comment
 };
 
 class Warehouse
@@ -31,14 +28,14 @@ class Warehouse
 	char* name;
 	char* expirationDate;
 	char* dateOfEntryIntoTheWarehouse;
-	char* NameOfManufacturer;
+	char* nameOfManufacturer;
 	static size_t availableQuantity;
 	Location locationWarehouse;
 
 	char*  comment;
 
 	Warehouse() = default;
-	Warehouse(char* name, char* expirationDate, char* dateOfEntryIntoTheWarehouse, char* NameOfManufacturer, static size_t availableQuantity,Location locationWarehouse);
+	Warehouse(char* name, char* expirationDate, char* dateOfEntryIntoTheWarehouse, char* nameOfManufacturer, static size_t availableQuantity,Location locationWarehouse);
 	Warehouse(const Warehouse& source);
 	~Warehouse();
 
