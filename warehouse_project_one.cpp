@@ -25,10 +25,10 @@ class Location
 
 class Warehouse
 {
-	char* name;
-	char* expirationDate;
-	char* dateOfEntryIntoTheWarehouse;
-	char* nameOfManufacturer;
+	char* name; //String mName -> ask Nora
+	char* expirationDate; // Date mExpiry
+	char* dateOfEntryIntoTheWarehouse; //Date mEntry
+	char* nameOfManufacturer; //String mName;
 	static size_t availableQuantity;
 	Location locationWarehouse;
 
