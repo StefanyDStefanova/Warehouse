@@ -8,8 +8,8 @@ class Location
 	unsigned int section;
 	unsigned int shelf;
 	unsigned int serialNumber;
-
-	Location()=default;
+public:
+	Location();
 
 };
 
